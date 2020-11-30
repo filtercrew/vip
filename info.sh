@@ -2,4 +2,5 @@
 
 clear
 neofetch
-echo -e "by AdminRumahConfig"
+echo -e "By Daeng SSH Server™"
+
