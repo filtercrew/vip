@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # Original script by fornesia, rzengineer and fawzya 
-# Mod by Kemadd
+# Mod by Daeng Hunter
 # 
 # ==================================================
 NIC=$(ip -4 route ls | grep default | grep -Po '(?<=dev )(\S+)' | head -1)
@@ -13,12 +13,12 @@ MYIP2="s/xxxxxxxxx/$MYIP/g";
 
 #detail nama perusahaan
 country=ID
-state=MALANG
-locality=JAWA TIMUR
-organization=www.sshtunneling.tk
-organizationalunit=www.sshtunneling.tk
-commonname=www.sshtunneling.tk
-email=andiihzarafi@domainm.my.id
+state=MAKASSAR
+locality=SULAWESI SELATAN
+organization=www.daengssh.com
+organizationalunit=www.daengssh.com
+commonname=www.daengssh.com
+email=admin@daengssh.com
 
 # simple password minimal
 wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/benkemad/benninstall/master/common-password-deb9"
@@ -103,7 +103,7 @@ apt-get -y install neofetch
 cd
 echo "clear" >> .profile
 echo "neofetch" >> .profile
-echo "echo by Kemaddd" >> .profile
+echo "echo by Daeng SSH Server" >> .profile
 
 # instal php5.6 ubuntu 16.04 64bit
 apt-get -y update
@@ -275,8 +275,8 @@ cd /etc/openvpn
 
 # Buat config client TCP 1194
 cat > /etc/openvpn/client-tcp-1194.ovpn <<-END
-##### WELCOME TO VPNSTORE #####
-##### www.sshtunneling.tk #####
+##### WELCOME TO DAENG SSH #####
+##### WWW.DAENGSSH.COM #####
 ##### DONT FORGET TO SUPPORT US #####
 client
 dev tun
@@ -296,8 +296,8 @@ sed -i $MYIP2 /etc/openvpn/client-tcp-1194.ovpn;
 
 # Buat config client TCP 2200
 cat > /etc/openvpn/client-tcp-2200.ovpn <<-END
-##### WELCOME TO VPNSTORE #####
-##### www.sshtunneling.tk #####
+##### WELCOME TO DAENG SSH #####
+##### WWW.DAENGSSH.COM #####
 ##### DONT FORGET TO SUPPORT US #####
 client
 dev tun
@@ -319,8 +319,8 @@ sed -i $MYIP2 /etc/openvpn/client-tcp-2200.ovpn;
 
 # Buat config client TCP 2200
 cat > /etc/openvpn/client-udp-25000.ovpn <<-END
-##### WELCOME TO VPNSTORE #####
-##### www.sshtunneling.tk #####
+##### WELCOME TO DAENG SSH #####
+##### WWW.DAENGSSH.COM #####
 ##### DONT FORGET TO SUPPORT US #####
 client
 dev tun
@@ -517,21 +517,21 @@ sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dr
 
 # download script
 cd /usr/bin
-wget -O perpanjang "https://raw.githubusercontent.com/benkemad/benninstall/master/perpanjang.sh"
-wget -O menu "https://raw.githubusercontent.com/benkemad/benninstall/master/menu.sh"
-wget -O usernew "https://raw.githubusercontent.com/benkemad/benninstall/master/usernew.sh"
-wget -O trial "https://raw.githubusercontent.com/benkemad/benninstall/master/trial.sh"
-wget -O hapus "https://raw.githubusercontent.com/benkemad/benninstall/master/hapus.sh"
-wget -O member "https://raw.githubusercontent.com/benkemad/benninstall/master/member.sh"
-wget -O delete "https://raw.githubusercontent.com/benkemad/benninstall/master/delete.sh"
-wget -O cek "https://raw.githubusercontent.com/benkemad/benninstall/master/cek.sh"
-wget -O restart "https://raw.githubusercontent.com/benkemad/benninstall/master/restart.sh"
-wget -O speedtest "https://raw.githubusercontent.com/benkemad/benninstall/master/speedtest_cli.py"
-wget -O user limit "https://raw.githubusercontent.com/benkemad/benninstall/master/user-limit.sh"
-wget -O portstat "https://raw.githubusercontent.com/benkemad/benninstall/master/portstat.sh"
-wget -O info "https://raw.githubusercontent.com/benkemad/benninstall/master/info.sh"
-wget -O contact "https://raw.githubusercontent.com/benkemad/benninstall/master/contact.sh"
-wget -O about "https://raw.githubusercontent.com/benkemad/benninstall/master/about.sh"
+wget -O perpanjang "https://raw.githubusercontent.com/filtercrew/vip/master/perpanjang.sh"
+wget -O menu "https://raw.githubusercontent.com/filtercrew/vip/master/menu.sh"
+wget -O usernew "https://raw.githubusercontent.com/filtercrew/vip/master/usernew.sh"
+wget -O trial "https://raw.githubusercontent.com/filtercrew/vip/master/trial.sh"
+wget -O hapus "https://raw.githubusercontent.com/filtercrew/vip/master/hapus.sh"
+wget -O member "https://raw.githubusercontent.com/filtercrew/vip/master/member.sh"
+wget -O delete "https://raw.githubusercontent.com/filtercrew/vip/master/delete.sh"
+wget -O cek "https://raw.githubusercontent.com/filtercrew/vip/master/cek.sh"
+wget -O restart "https://raw.githubusercontent.com/filtercrew/vip/master/restart.sh"
+wget -O speedtest "https://raw.githubusercontent.com/filtercrew/vip/master/speedtest_cli.py"
+wget -O user limit "https://raw.githubusercontent.com/filtercrew/vip/master/user-limit.sh"
+wget -O portstat "https://raw.githubusercontent.com/filtercrew/vip/master/portstat.sh"
+wget -O info "https://raw.githubusercontent.com/filtercrew/vip/master/info.sh"
+wget -O contact "https://raw.githubusercontent.com/filtercrew/vip/master/contact.sh"
+wget -O about "https://raw.githubusercontent.com/filtercrew/vip/master/about.sh"
 
 echo "0 0 * * * root /sbin/reboot" > /etc/cron.d/reboot
 
