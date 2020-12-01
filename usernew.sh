@@ -35,7 +35,7 @@ echo -e $purple "      #                  Terima Kasih                   #"
 sleep 0.5
 echo -e $green "      #                                                   #" 
 sleep 0.5
-echo -e $blue "      #        Copyright © AbdurRahman™ Premium 2020        #" 
+echo -e $blue "      #        Copyright © Daeng SSH Server™        #" 
 sleep 0.5
 echo -e $white "      =====================================================" 
 clear
@@ -45,7 +45,7 @@ exp="$(chage -l $Login | grep "Account expires" | awk -F": " '{print $2}')"
 echo -e "$Pass\n$Pass\n"|passwd $Login &> /dev/null
 echo -e ""
 echo -e "--------------------------------------"
-echo -e "     account creation successfully"
+echo -e "     Terimakasih telah berlangganan pada server kami, saat ini akun anda telah berhasil dibuat"
 echo -e "--------------------------------------"
 echo -e "         Configuration Detail"
 echo -e "--------------------------------------"
@@ -71,4 +71,4 @@ echo -e "-)Max Login 2 Devices"
 echo -e "-)If Not follow the Rule your account"
 echo -e "  Will be banned"
 echo -e "--------------------------------------"
-echo -e "Script by AdminRumahConfig"
+echo -e "Copyright ® Daeng SSH Server"
