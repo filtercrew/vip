@@ -13,12 +13,12 @@ MYIP2="s/xxxxxxxxx/$MYIP/g";
 
 #detail nama perusahaan
 country=ID
-state=MALANG
-locality=JAWA TIMUR
-organization=www.rumahconfig.com
-organizationalunit=www.rumahconfig.com
-commonname=www.rumahconfig.com
-email=admin@rumahconfig.com
+state=MAKASSAR
+locality=SULAWESI SELATAN
+organization=www.daengssh.com
+organizationalunit=www.daengssh.com
+commonname=Brillyan Aditya S
+email=admin@daengssh.com
 
 # simple password minimal
 wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/benkemad/scriptabdur/master/common-password-deb9"
@@ -103,7 +103,7 @@ apt-get -y install neofetch
 cd
 echo "clear" >> .profile
 echo "neofetch" >> .profile
-echo "echo by AdminRumahconfig" >> .profile
+echo "echo by Daeng SSH Server" >> .profile
 
 # instal php5.6 ubuntu 16.04 64bit
 apt-get -y update
@@ -112,20 +112,20 @@ apt-get -y update
 cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/benkemad/scriptabdur/master/nginx.conf"
+wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/filtercrew/vip/master/nginx.conf"
 mkdir -p /home/vps/public_html
-echo "<pre>Setup by Kemaddd</pre>" > /home/vps/public_html/index.html
-wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/benkemad/scriptabdur/master/vps.conf"
+echo "<pre>Setup by Daeng SSH</pre>" > /home/vps/public_html/index.html
+wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/filtercrew/vip/master/vps.conf"
 
 # install badvpn
 cd
-wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/benkemad/scriptabdur/master/badvpn-udpgw64"
+wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/filtercrew/vip/master/badvpn-udpgw64"
 sed -i '$ i\screen -AmdS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 1000 --max-connections-for-client 10' /etc/rc.local
 chmod +x /usr/bin/badvpn-udpgw
 screen -AmdS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 1000 --max-connections-for-client 10 
 
 cd
-wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/benkemad/scriptabdur/master/badvpn-udpgw64"
+wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/filtercrew/vip/master/badvpn-udpgw64"
 sed -i '$ i\screen -AmdS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 1000 --max-connections-for-client 10' /etc/rc.local
 chmod +x /usr/bin/badvpn-udpgw
 screen -AmdS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 1000 --max-connections-for-client 10 
@@ -277,8 +277,8 @@ cd /etc/openvpn
 
 # Buat config client TCP 1194
 cat > /etc/openvpn/client-tcp-1194.ovpn <<-END
-##### WELCOME TO RUMAHCONFIG SERVER #####
-##### www.RUMAHCONFIG.COM #####
+##### WELCOME TO DAENGSSH SERVER #####
+##### www.DAENGSSH.com #####
 ##### DONT FORGET TO SUPPORT US #####
 client
 dev tun
@@ -298,8 +298,8 @@ sed -i $MYIP2 /etc/openvpn/client-tcp-1194.ovpn;
 
 # Buat config client TCP 2200
 cat > /etc/openvpn/client-tcp-2200.ovpn <<-END
-##### WELCOME TO VPNSTORE #####
-##### www.sshtunneling.tk #####
+##### WELCOME TO DAENGSSH SERVER #####
+##### www.DAENGSSH.com #####
 ##### DONT FORGET TO SUPPORT US #####
 client
 dev tun
@@ -321,8 +321,8 @@ sed -i $MYIP2 /etc/openvpn/client-tcp-2200.ovpn;
 
 # Buat config client TCP 2200
 cat > /etc/openvpn/client-udp-25000.ovpn <<-END
-##### WELCOME TO VPNSTORE #####
-##### www.sshtunneling.tk #####
+##### WELCOME TO DAENGSSH SERVER #####
+##### www.DAENGSSH.com #####
 ##### DONT FORGET TO SUPPORT US #####
 client
 dev tun
@@ -812,22 +812,22 @@ sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dr
 
 # download script
 cd /usr/bin
-wget -O perpanjang "https://raw.githubusercontent.com/benkemad/scriptabdur/master/perpanjang.sh"
-wget -O menu "https://raw.githubusercontent.com/benkemad/scriptabdur/master/menu.sh"
-wget -O usernew "https://raw.githubusercontent.com/benkemad/scriptabdur/master/usernew.sh"
-wget -O trial "https://raw.githubusercontent.com/benkemad/scriptabdur/master/trial.sh"
-wget -O hapus "https://raw.githubusercontent.com/benkemad/scriptabdur/master/hapus.sh"
-wget -O member "https://raw.githubusercontent.com/benkemad/scriptabdur/master/member.sh"
-wget -O delete "https://raw.githubusercontent.com/benkemad/scriptabdur/master/delete.sh"
-wget -O cek "https://raw.githubusercontent.com/benkemad/scriptabdur/master/cek.sh"
-wget -O restart "https://raw.githubusercontent.com/benkemad/scriptabdur/master/restart.sh"
-wget -O speedtest "https://raw.githubusercontent.com/benkemad/scriptabdur/master/speedtest_cli.py"
-wget -O limit "https://raw.githubusercontent.com/benkemad/scriptabdur/master/limit.sh"
-wget -O userlimit "https://raw.githubusercontent.com/benkemad/scriptabdur/master/userlimit.sh"
-wget -O portstat "https://raw.githubusercontent.com/benkemad/scriptabdur/master/portstat.sh"
-wget -O info "https://raw.githubusercontent.com/benkemad/scriptabdur/master/info.sh"
-wget -O contact "https://raw.githubusercontent.com/benkemad/scriptabdur/master/contact.sh"
-wget -O about "https://raw.githubusercontent.com/benkemad/scriptabdur/master/about.sh"
+wget -O perpanjang "https://raw.githubusercontent.com/filtercrew/vip/master/perpanjang.sh"
+wget -O menu "https://raw.githubusercontent.com/filtercrew/vip/master/menu.sh"
+wget -O usernew "https://raw.githubusercontent.com/filtercrew/vip/master/usernew.sh"
+wget -O trial "https://raw.githubusercontent.com/filtercrew/vip/master/trial.sh"
+wget -O hapus "https://raw.githubusercontent.com/filtercrew/vip/master/hapus.sh"
+wget -O member "https://raw.githubusercontent.com/filtercrew/vip/master/member.sh"
+wget -O delete "https://raw.githubusercontent.com/filtercrew/vip/master/delete.sh"
+wget -O cek "https://raw.githubusercontent.com/filtercrew/vip/master/cek.sh"
+wget -O restart "https://raw.githubusercontent.com/filtercrew/vip/master/restart.sh"
+wget -O speedtest "https://raw.githubusercontent.com/filtercrew/vip/master/speedtest_cli.py"
+wget -O limit "https://raw.githubusercontent.com/filtercrew/vip/master/limit.sh"
+wget -O userlimit "https://raw.githubusercontent.com/filtercrew/vip/master/userlimit.sh"
+wget -O portstat "https://raw.githubusercontent.com/filtercrew/vip/master/portstat.sh"
+wget -O info "https://raw.githubusercontent.com/filtercrew/vip/master/info.sh"
+wget -O contact "https://raw.githubusercontent.com/filtercrew/vip/master/contact.sh"
+wget -O about "https://raw.githubusercontent.com/filtercrew/vip/master/about.sh"
 
 echo "0 0 * * * root /sbin/reboot" > /etc/cron.d/reboot
 
