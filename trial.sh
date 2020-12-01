@@ -35,7 +35,7 @@ echo -e $purple "      #                  Terima Kasih                   #"
 sleep 0.5
 echo -e $green "      #                                                   #" 
 sleep 0.5
-echo -e $blue "      #        Copyright © AbdurRahman™ Premium 2020        #" 
+echo -e $blue "      #        Copyright © Daeng SSH Server™        #" 
 sleep 0.5
 echo -e $white "      =====================================================" 
 clear
@@ -70,4 +70,4 @@ echo -e "-)Max Login 2 Devices"
 echo -e "-)If Not follow the Rule your account"
 echo -e "  Will be banned"
 echo -e "--------------------------------------"
-echo -e "mod by AdminRumahConfig"
+echo -e "Copyright ® Daeng SSH Server"
